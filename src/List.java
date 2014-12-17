@@ -8,11 +8,17 @@ class List {
 
 	Node top = null;
 
+	/**
+	 * Describe an item of the list
+	 * 
+	 * @author Nick Veremeichyk
+	 *
+	 */
 	class Node {
 		int value;
 		Node next;
 
-		Node(int value) {
+		Node(int value) {		// Item constructor
 			this.value = value;
 		}
 
@@ -79,7 +85,9 @@ class List {
 			System.out.println("A node with that value does not exist.");
 		}
 		while (item1 != null) {
-			if (top == null) {return;}
+			if (top == null) {
+				return;
+			}
 			if (top.value == value) {
 				top = top.next;
 			}
@@ -116,12 +124,16 @@ class List {
 		return false;
 	}
 
-	/**
-	 * Receives the first list's element;
-	 */
-	void firstElement() {
-		System.out.println(top.value);
-	}
+//	/**
+//	 * Receives the first list's element;
+//	 */
+//	void firstElement() throws NullPointerException {  
+//		try {
+//			System.out.println(top.value);
+//		} catch (NullPointerException e) {
+//			System.out.println("The list is empty");
+//		}
+//	}
 
 	/**
 	 * Print the list;

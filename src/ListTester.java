@@ -2,7 +2,7 @@
 public class ListTester {
 
 	public static void main(String[] args) {
-		List list = new List();
+		MyList list = new MyList();
 		
 		list.addFirst(1);
 		list.addLast(2);
